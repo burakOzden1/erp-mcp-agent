@@ -1,0 +1,35 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+
+# Virtual environments
+.venv/
+venv/
+
+# Secrets
+.env
+.env.*
+*.key
+*.pem
+secrets/
+
+# Runtime artifacts
+logs/*
+!logs/.gitkeep
+data/*.db
+data/*.db-*
+
+# Local Claude settings and private project brief
+.claude/settings.local.json
+CLAUDE.md
+
+# OS / editor
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/

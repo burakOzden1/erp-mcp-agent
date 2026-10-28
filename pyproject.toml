@@ -1,0 +1,43 @@
+[project]
+name = "erp-mcp-agent"
+version = "0.1.0"
+description = "Read-only MCP server that lets Claude query ERP data (stock, orders, balances, KPIs) safely."
+readme = "README.md"
+requires-python = ">=3.11"
+license = { text = "MIT" }
+authors = [{ name = "Zeki Burak Özden" }]
+dependencies = [
+    "mcp==2.3.0",
+]
+
+[project.urls]
+Repository = "https://github.com/burakOzden1/erp-mcp-agent"
+
+[project.optional-dependencies]
+dev = [
+    "pytest==9.2.0",
+    "ruff==0.17.3",
+]
+
+[project.scripts]
+erp-mcp = "erp_mcp.server:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "B", "UP"]
+
+[tool.ruff.lint.isort]
+known-first-party = ["erp_mcp", "seed_db", "package_skills", "tests"]

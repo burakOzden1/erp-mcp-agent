@@ -1,0 +1,7 @@
+{
+  "mcpServers": {
+    "erp-demo": {
+      "command": "C:\\path\\to\\erp-mcp-agent\\.venv\\Scripts\\erp-mcp.exe"
+    }
+  }
+}
